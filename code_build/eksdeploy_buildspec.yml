@@ -42,4 +42,4 @@ phases:
 
   post_build:
     commands:
-      - kubectl rollout restart deployment/<deployment-name>
+      - kubectl rollout restart deployment/random-joke-deployment
