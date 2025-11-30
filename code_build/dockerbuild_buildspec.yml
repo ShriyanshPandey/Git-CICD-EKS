@@ -4,6 +4,9 @@ env:
     DOCKER_REGISTRY_USERNAME: /myapp/github-cicd-eks/ecr-username
     DOCKER_REGISTRY_URL: /myapp/github-cicd-eks/ecr-url
     AWS_DEFAULT_REGION: /myapp/github-cicd-eks/aws-default-region
+    DOCKER_HUB_USERNAME: DOCKER_HUB_USERNAME
+    DOCKER_HUB_PASSWORD: DOCKER_HUB_PASSWORD
+    
 
 phases:
   install:
