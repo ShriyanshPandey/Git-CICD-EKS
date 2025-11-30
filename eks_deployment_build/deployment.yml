@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-joke-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: random-joke
+  template:
+    metadata:
+      labels:
+        app: random-joke
+    spec:
+      containers:
+      - name: random-joke
+        image: 850477376945.dkr.ecr.us-east-1.amazonaws.com/random-joke:latest
+        ports:
+        - containerPort: 5000
+
