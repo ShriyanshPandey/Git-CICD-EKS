@@ -19,6 +19,8 @@ phases:
     commands:
       - echo "Logging into Amazon ECR"
       - docker login --username AWS --password "$ECR_PASSWORD" "$DOCKER_REGISTRY_URL"
+      - echo "Logging into Docker Hub"
+      - echo "$DOCKER_HUB_PASSWORD" | docker login --username "$DOCKER_HUB_USERNAME" --password-stdin
       - echo "Building docker image"
       - docker build -t "$DOCKER_REGISTRY_URL:latest" .
       - echo "Pushing Docker image to ECR"
